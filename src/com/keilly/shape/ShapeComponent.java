@@ -1,14 +1,15 @@
+package com.keilly.shape;
+
 import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Created with IntelliJ IDEA.
- * User: keilly
- * Date: 14/09/2013
- * Time: 10:55 AM
- * To change this template use File | Settings | File Templates.
+ * Component to display arbitrary shapes.
+ * <p>
+ * Clients can add PaintedShapes to this component. The component will size to display all of the added shapes.
+ * The shapes will be rendered from the first to last (later added shapes will render on top of earlier added shapes).
  */
 public class ShapeComponent extends JComponent
 {
@@ -16,9 +17,6 @@ public class ShapeComponent extends JComponent
 
   public void addPaintedShape(PaintedShape paintedShape) {
     paintedShapes.add(paintedShape);
-
-
-
     invalidate();
     repaint();
   }
@@ -47,33 +45,11 @@ public class ShapeComponent extends JComponent
     }
 
     Insets insets = getInsets();
-    preferredSize.width += insets.left + insets.right + 1;
-    preferredSize.height += insets.top + insets.bottom + 1;
+    preferredSize.width += insets.left + insets.right;
+    preferredSize.height += insets.top + insets.bottom;
 
     return preferredSize;
   }
 
-  public interface PaintedShape {
-    public Shape getShape();
-    public void paintShape(Graphics2D g2);
-  }
 
-  public static class SimplePaintedShape implements PaintedShape {
-    private final Shape shape;
-    private final Color color;
-
-    public SimplePaintedShape(Shape shape, Color color) {
-      this.shape = shape;
-      this.color = color;
-    }
-
-    public Shape getShape() {
-      return shape;
-    }
-
-    public void paintShape(Graphics2D g2) {
-      g2.setColor(color);
-      g2.fill(shape);
-    }
-  }
 }
