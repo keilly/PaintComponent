@@ -8,7 +8,7 @@
     <ignored path=".idea/workspace.xml" />
     <file path="/ShapeApp.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379277252163" ignored="false" />
     <file path="/ShapeComponent.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379277233365" ignored="false" />
-    <file path="/Dummy.txt" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379277377568" ignored="false" />
+    <file path="/Dummy.txt" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379278471741" ignored="false" />
     <file path="/fragment.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379276629178" ignored="false" />
     <file path="/ShapePainter.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379276596343" ignored="false" />
     <file path="/SimplePaintedShape.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379276973443" ignored="false" />
@@ -386,19 +386,23 @@
       <created>1379277394497</created>
       <updated>1379277394497</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First basic working example, including and example app.">
+      <created>1379278474009</created>
+      <updated>1379278474009</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="96" y="54" width="1383" height="1074" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32809225" sideWeight="0.4988781" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39923954" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914045" sideWeight="0.50037396" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914045" sideWeight="0.50037396" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32914045" sideWeight="0.49962604" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32285115" sideWeight="0.49962604" order="7" side_tool="false" content_ui="tabs" />
