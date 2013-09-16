@@ -7,7 +7,7 @@ import java.awt.geom.Ellipse2D;
 /**
  * Runnable class to demonstrate the ShapeComponent.
  */
-public class TestApp
+public class DemoApp
 {
   public static void main(String[] args){
 
