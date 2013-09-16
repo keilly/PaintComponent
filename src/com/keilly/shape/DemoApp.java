@@ -15,9 +15,15 @@ public class DemoApp
     int h = 400;
 
     ShapeComponent shapeC = new ShapeComponent();
-    shapeC.addShape(new ColoredShape(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0, 150)));
-    shapeC.addShape(new ColoredShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255, 150)));
-    shapeC.addShape(new ColoredShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(255, 255, 0, 150)));
+
+    ColoredShape redCircle = new ColoredShape(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0, 150));
+    ColoredShape greenCircle = new ColoredShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0, 150));
+    ColoredShape blueCircle = new ColoredShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255, 150));
+
+    shapeC.addShape(redCircle);
+    shapeC.addShape(greenCircle);
+    shapeC.addShape(blueCircle);
+
     shapeC.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 
     ShapeComponent sc2 = new ShapeComponent();
