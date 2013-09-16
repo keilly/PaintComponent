@@ -19,8 +19,12 @@ public class TestApp
     shapeComponent.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0, 100)));
     shapeComponent.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255, 100)));
     shapeComponent.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
-    shapeComponent.setBackground(Color.WHITE);
-    shapeComponent.setOpaque(true);
+
+    ShapeComponent shapeComponent2 = new ShapeComponent();
+    shapeComponent2.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0)));
+    shapeComponent2.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0)));
+    shapeComponent2.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255)));
+    shapeComponent2.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 
     JFrame f = new JFrame();
     f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -28,6 +32,7 @@ public class TestApp
     f.setLocationRelativeTo(null);
     f.setLayout(new FlowLayout());
     f.add(shapeComponent);
+    f.add(shapeComponent2);
     f.setVisible(true);
   }
 }
