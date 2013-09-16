@@ -15,7 +15,7 @@ public class ShapeComponent extends JComponent
 {
   private List<PaintedShape> paintedShapes = new ArrayList<PaintedShape>();
 
-  public void addPaintedShape(PaintedShape paintedShape) {
+  public void addShape(PaintedShape paintedShape) {
     paintedShapes.add(paintedShape);
     invalidate();
     repaint();

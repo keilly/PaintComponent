@@ -14,25 +14,25 @@ public class TestApp
     int w = 400;
     int h = 400;
 
-    ShapeComponent shapeComponent = new ShapeComponent();
-    shapeComponent.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0, 100)));
-    shapeComponent.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0, 100)));
-    shapeComponent.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255, 100)));
-    shapeComponent.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+    ShapeComponent shapeC = new ShapeComponent();
+    shapeC.addShape(new ColoredShape(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0, 150)));
+    shapeC.addShape(new ColoredShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255, 150)));
+    shapeC.addShape(new ColoredShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(255, 255, 0, 150)));
+    shapeC.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 
-    ShapeComponent shapeComponent2 = new ShapeComponent();
-    shapeComponent2.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0)));
-    shapeComponent2.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0)));
-    shapeComponent2.addPaintedShape(new ColorPaintedShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255)));
-    shapeComponent2.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+    ShapeComponent sc2 = new ShapeComponent();
+    sc2.addShape(new ColoredShape(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0)));
+    sc2.addShape(new ColoredShape(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0)));
+    sc2.addShape(new ColoredShape(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255)));
+    sc2.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 
     JFrame f = new JFrame();
     f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     f.setSize(w, h);
     f.setLocationRelativeTo(null);
     f.setLayout(new FlowLayout());
-    f.add(shapeComponent);
-    f.add(shapeComponent2);
+    f.add(shapeC);
+    f.add(sc2);
     f.setVisible(true);
   }
 }
