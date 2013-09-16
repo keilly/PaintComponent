@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" name="Default" comment="First basic working example, including and example app.">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" name="Default" comment="" />
     <ignored path="ShapeComponent.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/ShapeApp.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379277252163" ignored="false" />
     <file path="/ShapeComponent.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379277233365" ignored="false" />
-    <file path="/Dummy.txt" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379345305889" ignored="false" />
+    <file path="/Dummy.txt" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379345324160" ignored="false" />
     <file path="/fragment.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379276629178" ignored="false" />
     <file path="/ShapePainter.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379276596343" ignored="false" />
     <file path="/SimplePaintedShape.java" changelist="70d9cd51-b68d-46a5-bf85-c94ea7beb9f3" time="1379276973443" ignored="false" />
@@ -75,7 +73,7 @@
       <file leaf-file-name="ShapeComponent.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/keilly/shape/ShapeComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="48" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.6894309">
+            <state line="45" column="48" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.6905537">
               <folding>
                 <element signature="e#515#529#0" expanded="true" />
               </folding>
@@ -392,31 +390,35 @@
       <created>1379278512907</created>
       <updated>1379278512907</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="First basic working example, including and example app.">
+      <created>1379345327762</created>
+      <updated>1379345327763</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="188" y="47" width="1383" height="1074" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32740587" sideWeight="0.4988781" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32704404" sideWeight="0.4988781" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39923954" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32740587" sideWeight="0.50112194" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32704404" sideWeight="0.50112194" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914045" sideWeight="0.49962604" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32285115" sideWeight="0.49962604" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29543754" sideWeight="0.67259413" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29543754" sideWeight="0.672956" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32914045" sideWeight="0.49962604" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32285115" sideWeight="0.49962604" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -551,7 +553,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/keilly/shape/ShapeComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="48" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.6894309">
+        <state line="45" column="48" selection-start="1471" selection-end="1471" vertical-scroll-proportion="0.6905537">
           <folding>
             <element signature="e#515#529#0" expanded="true" />
           </folding>
