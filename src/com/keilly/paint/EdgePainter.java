@@ -6,6 +6,7 @@ package com.keilly.paint;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.Shape;
@@ -29,16 +30,16 @@ public class EdgePainter implements Painter {
   }
 
   @Override
-  public Rectangle getBounds(JPainted paintComponent)
+  public Dimension getSize(JPainted paintComponent)
   {
     Rectangle bounds = shape.getBounds();
     bounds.width += stroke.getLineWidth();
     bounds.height += stroke.getLineWidth();
-    return bounds;
+    return bounds.getSize();
   }
 
   @Override
-  public void paint(JPainted paintComponent, Graphics2D g2)
+  public void paint(JPainted painted, Graphics2D g2)
   {
     g2.setColor(color);
     g2.setStroke(stroke);

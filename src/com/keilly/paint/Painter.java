@@ -13,18 +13,18 @@ import java.awt.*;
 public interface Painter
 {
   /**
-   * Return the bounds, in PaintComponent coordinates, that the painter requires to render into the
+   * Return the size that the painter requires to render into the
    * given component.
    * <p>
-   * The PaintComponent will calculate its preferred size from the union of its painters bounds.
-   * @return the bounds of the painter.
+   * The painted will calculate its preferred size from the union of its painters sizes and locations.
+   * @return the size needed by the painter.
    */
-  public Rectangle getBounds(JPainted paintComponent);
+  public Dimension getSize(JPainted painted);
 
   /**
    * Paint into the graphics of the given component
    * @param paintComponent the component requesting painting
    * @param g2 the graphics which to paint into.
    */
-  public void paint(JPainted paintComponent, Graphics2D g2);
+  public void paint(JPainted painted, Graphics2D g2);
 }

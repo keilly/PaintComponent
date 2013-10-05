@@ -5,6 +5,7 @@
 package com.keilly.paint;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -28,18 +29,18 @@ public class TextPainter implements Painter {
     }
 
     @Override
-    public Rectangle getBounds(JPainted paintComponent) {
-        Graphics2D g2 = (Graphics2D)paintComponent.getGraphics();
+    public Dimension getSize(JPainted painted) {
+        Graphics2D g2 = (Graphics2D)painted.getGraphics();
         g2.setFont(font);
         FontRenderContext frc = g2.getFontRenderContext();
         TextLayout layout = new TextLayout(text, font, frc);
         Rectangle2D r2 = layout.getBounds();
-        return r2.getBounds();
+        return r2.getBounds().getSize();
     }
     
 
     @Override
-    public void paint(JPainted paintComponent, Graphics2D g2) {
+    public void paint(JPainted painted, Graphics2D g2) {
         g2.setColor(color);
         g2.setFont(font);
         FontRenderContext frc = g2.getFontRenderContext();
