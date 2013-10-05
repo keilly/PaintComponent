@@ -3,6 +3,7 @@ package com.keilly.paint;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
+import java.awt.geom.RoundRectangle2D;
 
 /**
  * Runnable class to demonstrate the ShapeComponent.
@@ -14,31 +15,41 @@ public class DemoApp
     int w = 400;
     int h = 400;
 
-    PaintComponent shapeC = new PaintComponent();
+    PaintComponent circleComponent = new PaintComponent();
 
-    ShapePainter redCircle = new ShapePainter(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0, 150));
-    ShapePainter greenCircle = new ShapePainter(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0, 150));
-    ShapePainter blueCircle = new ShapePainter(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255, 150));
+    Shape circle = new Ellipse2D.Double(0, 0, 100, 100);
+    ShapePainter redCircle = new ShapePainter(circle, new Color(255, 0, 0, 150));
+    ShapePainter greenCircle = new ShapePainter(circle, new Color(0, 255, 0, 150));
+    ShapePainter blueCircle = new ShapePainter(circle, new Color(0, 0, 255, 150));
 
-    shapeC.addPainter(redCircle);
-    shapeC.addPainter(greenCircle);
-    shapeC.addPainter(blueCircle);
+    circleComponent.addPaint(redCircle, new Point(33, 0));
+    circleComponent.addPaint(greenCircle, new Point(0, 33));
+    circleComponent.addPaint(blueCircle, new Point(66, 33));
 
-    shapeC.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+    circleComponent.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 
-    PaintComponent sc2 = new PaintComponent();
-    sc2.addPainter(new ShapePainter(new Ellipse2D.Double(33, 0, 100, 100), new Color(255, 0, 0)));
-    sc2.addPainter(new ShapePainter(new Ellipse2D.Double(0, 33, 100, 100), new Color(0, 255, 0)));
-    sc2.addPainter(new ShapePainter(new Ellipse2D.Double(66, 33, 100, 100), new Color(0, 0, 255)));
-    sc2.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
+    PaintComponent textComponent = new PaintComponent();
+    Shape backgroundShape = new RoundRectangle2D.Double(0, 0, 100, 30, 10, 10);
+    textComponent.addPaint(
+            new ShapePainter(backgroundShape, new Color(255, 0, 200, 150)),
+            new Point(4, 4));
+    textComponent.addPaint(
+            new EdgePainter(backgroundShape, new Color(200, 0, 150), 
+                new BasicStroke(8f, BasicStroke.CAP_ROUND, BasicStroke.JOIN_ROUND, 1f, new float[]{10f}, 0f)),
+            new Point(4, 4));
+    textComponent.addPaint(
+            new TextPainter("Hello", 
+                            new Font(Font.MONOSPACED, Font.BOLD, 15), 
+                            Color.BLACK), 
+            new Point(30, 13));
 
     JFrame f = new JFrame();
     f.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
     f.setSize(w, h);
     f.setLocationRelativeTo(null);
     f.setLayout(new FlowLayout());
-    f.add(shapeC);
-    f.add(sc2);
+    f.add(circleComponent);
+    f.add(textComponent);
     f.setVisible(true);
   }
 }
