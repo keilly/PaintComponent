@@ -15,11 +15,11 @@ public class ShapePainter implements Painter
     this.color = color;
   }
 
-  @Override
+  @Override 
   public Rectangle getBounds(PaintComponent paintComponent)
   {
-    return shape.getBounds();
-  }
+    return shape.getBounds(  );
+  }  
 
   @Override
   public void paint(PaintComponent paintComponent, Graphics2D g2)
