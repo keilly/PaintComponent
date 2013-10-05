@@ -11,10 +11,10 @@ import java.util.List;
  */
 public class PaintComponent extends JComponent
 {
-  private List<Painter> painters = new ArrayList<>();
+  private List<Paint> paints = new ArrayList<>();
 
-  public void addPainter(Painter painter) {
-    painters.add(painter);
+  public void addPaint(Painter painter, Point location) {
+    paints.add(new Paint(painter, location));
     invalidate();
     repaint();
   }
@@ -28,9 +28,11 @@ public class PaintComponent extends JComponent
     g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
     Insets insets = getInsets();
     g2.translate(insets.left, insets.top);
-    for(Painter painter : painters) {
+    for(Paint paint : paints) {
       Graphics2D painterG = (Graphics2D)g2.create();
-      painter.paint(this, painterG);
+      painterG.translate(paint.location.x, paint.location.y);
+      paint.painter.paint(this, painterG);
+      painterG.translate(-paint.location.x, -paint.location.y);
       painterG.dispose();
     }
     g2.translate(-insets.left, -insets.top);
@@ -38,10 +40,10 @@ public class PaintComponent extends JComponent
 
   public Dimension getPreferredSize() {
     Dimension preferredSize = new Dimension(10, 10);
-    for(Painter ps : painters) {
-      Rectangle bounds = ps.getBounds(this);
-      preferredSize.width = Math.max(preferredSize.width, bounds.x + bounds.width);
-      preferredSize.height = Math.max(preferredSize.height, bounds.y + bounds.height);
+    for(Paint paint : paints) {
+      Rectangle bounds = paint.painter.getBounds(this);
+      preferredSize.width =  Math.max(preferredSize.width, paint.location.x + bounds.x + bounds.width + 1);
+      preferredSize.height = Math.max(preferredSize.height, paint.location.y + bounds.y + bounds.height + 1);
     }
 
     Insets insets = getInsets();
@@ -49,5 +51,15 @@ public class PaintComponent extends JComponent
     preferredSize.height += insets.top + insets.bottom;
 
     return preferredSize;
+  }
+  
+  private class Paint {
+      private final Painter painter;
+      private final Point location;
+      
+      private Paint(Painter painter, Point location) {
+          this.painter = painter;
+          this.location = location;
+      }
   }
 }
