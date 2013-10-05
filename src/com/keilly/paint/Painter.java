@@ -19,12 +19,12 @@ public interface Painter
    * The PaintComponent will calculate its preferred size from the union of its painters bounds.
    * @return the bounds of the painter.
    */
-  public Rectangle getBounds(PaintComponent paintComponent);
+  public Rectangle getBounds(JPainted paintComponent);
 
   /**
    * Paint into the graphics of the given component
    * @param paintComponent the component requesting painting
    * @param g2 the graphics which to paint into.
    */
-  public void paint(PaintComponent paintComponent, Graphics2D g2);
+  public void paint(JPainted paintComponent, Graphics2D g2);
 }

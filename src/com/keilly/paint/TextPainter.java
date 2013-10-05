@@ -28,7 +28,7 @@ public class TextPainter implements Painter {
     }
 
     @Override
-    public Rectangle getBounds(PaintComponent paintComponent) {
+    public Rectangle getBounds(JPainted paintComponent) {
         Graphics2D g2 = (Graphics2D)paintComponent.getGraphics();
         g2.setFont(font);
         FontRenderContext frc = g2.getFontRenderContext();
@@ -39,7 +39,7 @@ public class TextPainter implements Painter {
     
 
     @Override
-    public void paint(PaintComponent paintComponent, Graphics2D g2) {
+    public void paint(JPainted paintComponent, Graphics2D g2) {
         g2.setColor(color);
         g2.setFont(font);
         FontRenderContext frc = g2.getFontRenderContext();

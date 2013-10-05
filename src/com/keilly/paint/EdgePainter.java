@@ -29,7 +29,7 @@ public class EdgePainter implements Painter {
   }
 
   @Override
-  public Rectangle getBounds(PaintComponent paintComponent)
+  public Rectangle getBounds(JPainted paintComponent)
   {
     Rectangle bounds = shape.getBounds();
     bounds.width += stroke.getLineWidth();
@@ -38,7 +38,7 @@ public class EdgePainter implements Painter {
   }
 
   @Override
-  public void paint(PaintComponent paintComponent, Graphics2D g2)
+  public void paint(JPainted paintComponent, Graphics2D g2)
   {
     g2.setColor(color);
     g2.setStroke(stroke);

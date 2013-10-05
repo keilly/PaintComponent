@@ -16,13 +16,13 @@ public class ShapePainter implements Painter
   }
 
   @Override 
-  public Rectangle getBounds(PaintComponent paintComponent)
+  public Rectangle getBounds(JPainted paintComponent)
   {
     return shape.getBounds(  );
   }  
 
   @Override
-  public void paint(PaintComponent paintComponent, Graphics2D g2)
+  public void paint(JPainted paintComponent, Graphics2D g2)
   {
     g2.setColor(color);
     g2.fill(shape);

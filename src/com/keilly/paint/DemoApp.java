@@ -15,7 +15,7 @@ public class DemoApp
     int w = 400;
     int h = 400;
 
-    PaintComponent circleComponent = new PaintComponent();
+    JPainted circleComponent = new JPainted();
 
     Shape circle = new Ellipse2D.Double(0, 0, 100, 100);
     ShapePainter redCircle = new ShapePainter(circle, new Color(255, 0, 0, 150));
@@ -28,7 +28,7 @@ public class DemoApp
 
     circleComponent.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 
-    PaintComponent textComponent = new PaintComponent();
+    JPainted textComponent = new JPainted();
     Shape backgroundShape = new RoundRectangle2D.Double(0, 0, 100, 30, 10, 10);
     textComponent.addPaint(
             new ShapePainter(backgroundShape, new Color(255, 0, 200, 150)),
