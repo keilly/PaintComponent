@@ -42,6 +42,7 @@ public class DemoApp
                             new Font(Font.MONOSPACED, Font.BOLD, 15), 
                             Color.BLACK), 
             new Point(34, 15));
+    textComponent.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
     
     
     JPainted rotatedComponent = new JPainted();
@@ -57,8 +58,8 @@ public class DemoApp
             new TextPainter("Goodbye", 
                             new Font(Font.MONOSPACED, Font.BOLD, 15), 
                             Color.BLACK), 
-            new Point(34, 15));
-    RotatePainter rotatePainter = new RotatePainter(interiorPainter, 0);
+            new Point(26, 12));
+    RotatePainter rotatePainter = new RotatePainter(interiorPainter, 30);
     rotatedComponent.addPaint(rotatePainter, new Point(0,0));
     rotatedComponent.setBorder(BorderFactory.createLineBorder(Color.DARK_GRAY, 1));
 

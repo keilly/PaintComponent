@@ -4,15 +4,11 @@
  */
 package com.keilly.paint;
 
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Font;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
+import javax.swing.*;
+import java.awt.*;
 import java.awt.font.FontRenderContext;
 import java.awt.font.TextLayout;
 import java.awt.geom.Rectangle2D;
-import javax.swing.UIManager;
 
 /**
  * Paint arbitrary text.
@@ -21,6 +17,7 @@ public class TextPainter implements Painter {
     private final Font font;
     private final String text;
     private final Color color;
+    private Rectangle2D r2;
     
     public TextPainter(String text, Font font, Color color){
         this.text = text;
@@ -30,11 +27,13 @@ public class TextPainter implements Painter {
 
     @Override
     public Dimension getSize(JPainted painted) {
-        Graphics2D g2 = (Graphics2D)painted.getGraphics();
-        g2.setFont(font);
-        FontRenderContext frc = g2.getFontRenderContext();
-        TextLayout layout = new TextLayout(text, font, frc);
-        Rectangle2D r2 = layout.getBounds();
+        if (r2 == null) {
+          Graphics2D g2 = (Graphics2D)painted.getGraphics();
+          g2.setFont(font);
+          FontRenderContext frc = g2.getFontRenderContext();
+          TextLayout layout = new TextLayout(text, font, frc);
+          r2 = layout.getBounds();
+        }
         return r2.getBounds().getSize();
     }
     

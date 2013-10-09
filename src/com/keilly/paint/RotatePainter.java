@@ -18,7 +18,7 @@ import java.awt.geom.Rectangle2D;
 public class RotatePainter implements Painter {
     private final Painter painterToRotate;
     private final double rotation;
-    private Dimension size;
+    private Rectangle bounds;
     
     public RotatePainter(Painter painterToRotate, double rotationDegrees) {
         this.painterToRotate = painterToRotate;
@@ -27,19 +27,19 @@ public class RotatePainter implements Painter {
     
     @Override
     public Dimension getSize(JPainted painted) {   
-        if (size == null) {
+        if (bounds == null) {
             Dimension painterSize = painterToRotate.getSize(painted);
             Rectangle2D rect = new Rectangle2D.Double(0, 0, painterSize.width, painterSize.height);
             Path2D path = new Path2D.Double(rect);
             Shape rotated = path.createTransformedShape(AffineTransform.getRotateInstance(rotation));
-            size = rotated.getBounds().getSize();
+          bounds = rotated.getBounds();
         }
-        return size;
+        return bounds.getSize();
     }
 
     @Override
     public void paint(JPainted painted, Graphics2D g2) {
-        //g2.translate(size.width/2, size.height/2);
+        g2.translate(-bounds.x, -bounds.y);
         g2.rotate(rotation);
         painterToRotate.paint(painted, g2);
     }

@@ -4,13 +4,7 @@
  */
 package com.keilly.paint;
 
-import java.awt.BasicStroke;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics2D;
-import java.awt.Rectangle;
-import java.awt.Shape;
-import java.awt.Stroke;
+import java.awt.*;
 
 /**
  * Paint the boundary of a given shape with a certain stroke and color.
@@ -33,8 +27,8 @@ public class EdgePainter implements Painter {
   public Dimension getSize(JPainted paintComponent)
   {
     Rectangle bounds = shape.getBounds();
-    bounds.width += stroke.getLineWidth();
-    bounds.height += stroke.getLineWidth();
+    bounds.width += stroke.getLineWidth()/2;
+    bounds.height += stroke.getLineWidth()/2;
     return bounds.getSize();
   }
 
